@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>个人中心</title>
+<link rel="stylesheet" type="text/css"
+	href="static/css/bootstrap.min.css">
+<script src="static/js/jquery-3.4.1.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/template-web.js"></script>
+<style type="text/css">
+.user_content {
+	width: 900px;
+	overflow: hidden;
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+.user_body {
+	float: left;
+	width: 880px;
+	margin-left: 8%;
+	margin-right: 8%;
+}
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">地下矿井定位</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="userCenter.html"><span
+						class="glyphicon glyphicon-magnet"></span> 我的</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="user_content" id="user_content">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#users" data-toggle="tab">用户管理</a></li>
+			<li><a href="#diaries" data-toggle="tab">日志上传</a></li>
+		</ul>
+
+		<div class="user_body" id="user_body">
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="users">
+					<h2>用户管理</h2>
+					<br> <br>
+					<div class="media">
+						<div class="alert alert-info">您为超级用户，在此查看用户列表。</div>
+					</div>
+					<div class="media" id="users_content"></div>
+					<br>
+					<hr>
+				</div>
+
+				<div class="tab-pane fade" id="diaries">
+					<h2>日志上传</h2>
+					<br> <br>
+					<div class="media">
+						<form name="form2" action="/test2/file/uploadspring"
+							method="post" enctype="multipart/form-data">
+							<input type="file" name="file_04"/> <input type="submit"
+								value="fileupload" />
+						</form>
+					</div>
+					<br>
+					<hr>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="addUser" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:2041">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myUser">添加用户</h4>
+				</div>
+				<div class="modal-body">
+					<div class="input-group" style="display: none;">
+						<span class="input_tip">*id</span> <input id="id"
+							class="form-control" placeholder="请输入用户id" />
+					</div>
+					<div class="input-group">
+						<span class="input_tip">*用户名</span> <input id="username"
+							class="form-control" placeholder="请输入用户名" />
+					</div>
+					<div class="input-group">
+						<span class="input_tip">*密码</span> <input id="password"
+							class="form-control" style="-webkit-text-security: disc"
+							placeholder="请输入密码" />
+					</div>
+					<div class="input-group">
+						<span class="input_tip" style="margin-top: 20px;">手机号</span> <input
+							id="phone" type="tel" class="form-control" placeholder="请输入手机号" />
+					</div>
+					<div class="input-group">
+						<span class="input_tip">*邮箱</span> <input id="email" type="email"
+							class="form-control" placeholder="请输入邮箱" />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary"
+						onclick="addorEditUser()">提交</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="deleteUser" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+					<h4 class="modal-title">要删除这个用户？</h4>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary"
+						onclick="deleteUser()">提交</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<script id="user_list" type="text/html">
+            <table class="table table-hover">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>用户名</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                        <th>修改时间</th>
+                        <th><button class="btn btn-primary pull-right" data-toggle="modal" onclick="showAddDialog()">添加用户</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {{each $data}}
+                    <tr>
+                        <td>{{$index}}</td>
+                        <td>{{$value.username}}</td>
+                        <td>{{$value.phone}}</td>
+                        <td>{{$value.email}}</td>
+                        <td>{{$value.editTime}}</td>
+                        <td>
+                            <button type="button" class="btn btn-default" onclick="showEditDialog({{$value.id}})">编辑</button>
+                            <button type="button" class="btn btn-default" onclick="showDeleteDialog({{$value.id}})">删除</button>
+
+                        </td>
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+	</script>
+	<script type="text/javascript" src="static/js/user.js"></script>
+
+</body>
+
+</html>

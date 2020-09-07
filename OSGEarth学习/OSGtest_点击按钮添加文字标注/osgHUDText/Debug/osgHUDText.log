@@ -1,0 +1,19 @@
+﻿生成启动时间为 2020/7/19 18:28:50。
+项目“C:\Users\Chinesesman\Desktop\osgHUDText\osgHUDText.vcxproj”在节点 2 上(Build 个目标)。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ManipulatorTravel.cpp main.cpp
+  main.cpp
+  正在生成代码...
+  正在编译...
+  ManipulatorTravel.cpp
+  正在生成代码...
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chinesesman\Desktop\osgHUDText\Debug\osgHUDText.exe" /INCREMENTAL /NOLOGO /LIBPATH:\lib OpenThreadsd.lib osgd.lib osgDBd.lib osgUtild.lib osgGAd.lib osgViewerd.lib osgTextd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Chinesesman\Desktop\osgHUDText\Debug\osgHUDText.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chinesesman\Desktop\osgHUDText\Debug\osgHUDText.lib" /MACHINE:X86 /SAFESEH Debug\main.obj
+  Debug\ManipulatorTravel.obj
+main.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  osgHUDText.vcxproj -> C:\Users\Chinesesman\Desktop\osgHUDText\Debug\osgHUDText.exe
+已完成生成项目“C:\Users\Chinesesman\Desktop\osgHUDText\osgHUDText.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:54.64
