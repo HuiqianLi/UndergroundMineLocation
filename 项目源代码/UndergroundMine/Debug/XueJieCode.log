@@ -1,0 +1,28 @@
+﻿生成启动时间为 2020/10/18 20:07:01。
+项目“C:\Users\Chinesesman\Desktop\XueJieCode - 副本\XueJieCode.vcxproj”在节点 2 上(Build 个目标)。
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(362,5): warning MSB8003: Could not find WindowsSDKDir variable from the registry.  TargetFrameworkVersion or PlatformToolset may be set to an invalid version number.
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (XueJieCode.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /I.\GeneratedFiles\Debug /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtOpenGL /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtSql /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\ActiveQt /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_SQL_LIB /D QT_WIDGETS_LIB /D QAXSERVER /D _USING_V110_SDK71_ /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\qrc_MainWindow.cpp
+  qrc_MainWindow.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chinesesman\Desktop\XueJieCode - 副本\Win32\Debug\\UndergroundMine.exe" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5Sqld.lib Qt5Widgetsd.lib OpenThreadsd.lib osgd.lib osgDBd.lib osgUtild.lib osgGAd.lib osgViewerd.lib osgTextd.lib osgFXd.lib Qt5AxContainerd.lib Qt5AxBased.lib Qt5AxServerd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Chinesesman\Desktop\XueJieCode - 副本\Win32\Debug\UndergroundMine.pdb" /SUBSYSTEM:CONSOLE,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chinesesman\Desktop\XueJieCode - 副本\Win32\Debug\UndergroundMine.lib" /MACHINE:X86 /SAFESEH Debug\moc_MainWindow.obj
+  Debug\moc_modeleditwidget.obj
+  Debug\moc_pickhandler.obj
+  Debug\moc_qtosgwidget.obj
+  Debug\moc_wanderhandler.obj
+  Debug\qrc_MainWindow.obj
+  Debug\main.obj
+  Debug\MainWindow.obj
+  Debug\modeleditwidget.obj
+  Debug\network3d.obj
+  Debug\pickhandler.obj
+  Debug\qtosgwidget.obj
+  Debug\wanderhandler.obj
+  Debug\windowcapturecallback.obj
+  XueJieCode.vcxproj -> C:\Users\Chinesesman\Desktop\XueJieCode - 副本\Win32\Debug\UndergroundMine.exe
+已完成生成项目“C:\Users\Chinesesman\Desktop\XueJieCode - 副本\XueJieCode.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.09
