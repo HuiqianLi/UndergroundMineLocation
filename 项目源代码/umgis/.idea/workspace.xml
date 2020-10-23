@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="hrms:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="976b2eef-141e-4c0d-bc2e-4edf2a519890" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mybatis-config" />
+        <option value="spring-beans.schema" />
+        <option value="JavaScript File" />
+        <option value="Jsp File" />
+        <option value="mybatis-mapper.xml" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\repository" />
+        <option name="mavenHome" value="D:/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dB2kV4UM5qY3RvMkGGwzX5imxl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\hrms\src\main\webapp\WEB-INF\view\common" />
+      <recent name="E:\IdeaProjects\hrms\src\main\webapp" />
+      <recent name="E:\IdeaProjects\hrms\src\main\webapp\WEB-INF" />
+      <recent name="E:\IdeaProjects\hrms\src\main\webapp\WEB-INF\view" />
+      <recent name="E:\IdeaProjects\hrms\src\main\webapp\skin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.unknown.hrms.service" />
+      <recent name="com.unknown.hrms.service.impl" />
+      <recent name="com.unknown.hrms.dao" />
+      <recent name="com.unknown.hrms.entity" />
+      <recent name="com.unknown.hrms.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\大三\实习\hrms\src\main\webapp\WEB-INF\view" />
+      <recent name="E:\大三\实习\hrms\target\ssm\WEB-INF\classes\mapper" />
+      <recent name="E:\大三\实习\hrms\src\main\webapp\WEB-INF\view\measure" />
+      <recent name="E:\IdeaProjects\hrms\src\main\webapp\lib\uploadFile" />
+      <recent name="E:\IdeaProjects\hrms\src\main\java\com\unknown\hrms\controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.hrms">
+    <configuration name="MenuTest.testGetMenuService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hrms" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MenuTest" />
+      <option name="METHOD_NAME" value="testGetMenuService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuTest.testMenu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hrms" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MenuTest" />
+      <option name="METHOD_NAME" value="testMenu" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hrms" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="testByUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testGetPermByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hrms" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="testGetPermByUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="authTest.testUpdataEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hrms" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="authTest" />
+      <option name="METHOD_NAME" value="testUpdataEmp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hrms" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="hrms:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_hrms_3" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56925" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="hrms:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.MenuTest.testGetMenuService" />
+      <item itemvalue="JUnit.UserTest.testByUsername" />
+      <item itemvalue="JUnit.MenuTest.testMenu" />
+      <item itemvalue="JUnit.UserTest.testGetPermByUserId" />
+      <item itemvalue="JUnit.authTest.testUpdataEmp" />
+      <item itemvalue="Tomcat Server.hrms" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.authTest.testUpdataEmp" />
+        <item itemvalue="JUnit.UserTest.testGetPermByUserId" />
+        <item itemvalue="JUnit.UserTest.testByUsername" />
+        <item itemvalue="JUnit.MenuTest.testMenu" />
+        <item itemvalue="JUnit.MenuTest.testGetMenuService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="976b2eef-141e-4c0d-bc2e-4edf2a519890" name="Default Changelist" comment="" />
+      <created>1591884308844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591884308844</updated>
+      <workItem from="1591884310662" duration="857000" />
+      <workItem from="1591885172305" duration="7414000" />
+      <workItem from="1591893640481" duration="72000" />
+      <workItem from="1591917773967" duration="14361000" />
+      <workItem from="1591938216895" duration="207000" />
+      <workItem from="1591938427689" duration="17180000" />
+      <workItem from="1592013004310" duration="6431000" />
+      <workItem from="1592041426139" duration="1054000" />
+      <workItem from="1592042543354" duration="1310000" />
+      <workItem from="1592047024488" duration="10893000" />
+      <workItem from="1592061973079" duration="989000" />
+      <workItem from="1592125808265" duration="16172000" />
+      <workItem from="1592180140035" duration="28938000" />
+      <workItem from="1592211296187" duration="12483000" />
+      <workItem from="1592292265158" duration="2876000" />
+      <workItem from="1592358294398" duration="6138000" />
+      <workItem from="1592365726215" duration="8519000" />
+      <workItem from="1592442165886" duration="19474000" />
+      <workItem from="1592529058657" duration="19120000" />
+      <workItem from="1592623974312" duration="4348000" />
+      <workItem from="1592719317750" duration="19000" />
+      <workItem from="1592807752459" duration="602000" />
+      <workItem from="1592874309664" duration="33592000" />
+      <workItem from="1592958469964" duration="9945000" />
+      <workItem from="1593051715885" duration="11876000" />
+      <workItem from="1593080593064" duration="12910000" />
+      <workItem from="1593137560626" duration="29219000" />
+      <workItem from="1593179224385" duration="9155000" />
+      <workItem from="1593192367257" duration="504000" />
+      <workItem from="1593227751321" duration="14871000" />
+      <workItem from="1593249282120" duration="10203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602407680937">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602407680937" />
+    <state x="314" y="176" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602414916084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="314" y="176" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1602414916084" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603025892181">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603025892181" />
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1603283088738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603283088738" />
+    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1603283088738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603283088738" />
+    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1603283088737">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603283088737" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1603283088738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603283088738" />
+    <state width="1493" height="294" key="GridCell.Tab.1.bottom" timestamp="1603283088738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603283088738" />
+    <state width="1493" height="294" key="GridCell.Tab.1.center" timestamp="1603283088738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603283088738" />
+    <state width="1493" height="294" key="GridCell.Tab.1.left" timestamp="1603283088738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603283088738" />
+    <state width="1493" height="294" key="GridCell.Tab.1.right" timestamp="1603283088738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603283088738" />
+    <state width="1493" height="294" key="GridCell.Tab.2.bottom" timestamp="1603283088739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603283088739" />
+    <state width="1493" height="294" key="GridCell.Tab.2.center" timestamp="1603283088739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1603283088739" />
+    <state width="1493" height="294" key="GridCell.Tab.2.left" timestamp="1603283088739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1603283088739" />
+    <state width="1493" height="294" key="GridCell.Tab.2.right" timestamp="1603283088739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="294" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1603283088739" />
+    <state x="270" y="57" key="SettingsEditor" timestamp="1602407978965">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602407978965" />
+    <state x="468" y="144" width="921" height="536" key="find.popup" timestamp="1603277114840">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="468" y="144" width="921" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603277114840" />
+  </component>
+</project>

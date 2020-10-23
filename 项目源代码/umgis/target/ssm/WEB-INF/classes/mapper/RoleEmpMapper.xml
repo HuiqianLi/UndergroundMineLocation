@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IRoleEmpMapper">
+<insert id="authUserRole" >
+    insert into t_role_emp(rid,uid) values
+    <foreach collection="empIdList" item="empId" separator=",">
+        (#{roleId},#{empId})
+    </foreach>
+</insert>
+
+
+</mapper>

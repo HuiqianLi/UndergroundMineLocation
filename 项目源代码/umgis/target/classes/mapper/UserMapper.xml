@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IUserMapper">
+<select id="selectUserByUsername" parameterType="String" resultType="com.unknown.hrms.entity.User">
+    select * from t_emp where username = #{username};
+</select>
+    <select id="getPersByUserId" parameterType="java.lang.Integer" resultType="java.lang.String">
+        select p_code
+        from t_role_emp,t_menu,t_role_menu
+        where t_role_emp.uid = #{id}
+        and t_role_emp.rid = t_role_menu.rid
+        and t_role_menu.mid = t_menu.id;
+    </select>
+</mapper>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- 加载配置文件 ,通配符匹配所有配置文件-->
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:db.properties"/>
+    <!--配置注解扫描 不扫描@Controller-->
+    <context:component-scan base-package="com.unknown.hrms.**" >
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}?serverTimezone=GMT%2B8"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 配置初始化大小、最小、最大 -->
+        <property name="initialSize" value="${jdbc.pool.init}" />
+        <property name="minIdle" value="${jdbc.pool.minIdle}" />
+        <property name="maxActive" value="${jdbc.pool.maxActive}" />
+
+        <!-- 配置获取连接等待超时的时间 -->
+        <property name="maxWait" value="60000" />
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+
+        <property name="validationQuery" value="${jdbc.testSql}" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+
+        <!-- 配置监控统计拦截的filters -->
+        <property name="filters" value="stat" />
+    </bean>
+    <!--mybatis 配置-->
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
+    <!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath*:mapper/*Mapper.xml"/>
+        <!--设置分页插件分页-->
+        <property name="plugins">
+            <array>
+                <bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor"></bean>
+            </array>
+        </property>
+    </bean>
+    <!--配置dao-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.unknown.hrms.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+    <!--事务管理-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--事务管理驱动-->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+    <!-- shiro start -->
+    <!-- 1. 配置SecurityManager -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!--<property name="cacheManager" ref="cacheManager" />-->
+        <property name="authenticator" ref="authenticator"></property>
+        <!-- 可以配置多个Realm，其实会把realms属性赋值给ModularRealmAuthenticator的realms属性 -->
+        <property name="realms">
+            <list>
+                <ref bean="userRealm" />
+            </list>
+        </property>
+    </bean>
+
+    <!-- 2. 配置CacheManager -->
+    <!-- 2.1 需要加入ehcache的jar包及配置文件 -->
+    <!--<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml" />
+    </bean>-->
+
+    <!-- 3. 配置Realm -->
+    <!-- 3.1 直接配置继承了org.apache.shiro.realm.AuthorizingRealm的bean -->
+    <bean id="userRealm" class="com.unknown.hrms.realm.UserRealm">
+        <!-- 配置密码匹配器 -->
+       <!-- <property name="credentialsMatcher">
+            <bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+                &lt;!&ndash; 加密算法为MD5 &ndash;&gt;
+                <property name="hashAlgorithmName" value="MD5"></property>
+                &lt;!&ndash; 加密次数 &ndash;&gt;
+                <property name="hashIterations" value="1024"></property>
+            </bean>
+        </property>-->
+    </bean>
+
+    <!-- 4. 配置LifecycleBeanPostProcessor，可以自定义地来调用配置在Spring IOC容器中shiro bean的生命周期方法 -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+    <!-- 5. 使能够在IOC容器中使用shiro的注解，但必须在配置了LifecycleBeanPostProcessor之后才可以使用 -->
+    <bean
+            class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+            depends-on="lifecycleBeanPostProcessor" />
+    <bean
+            class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager" />
+    </bean>
+
+    <!-- 6. 配置ShiroFilter -->
+    <!-- 6.1 id必须和web.xml中配置的DelegatingFilterProxy的<filter-name>一致。 如果不一致，会抛出NoSuchBeanDefinitionException异常，因为shiro会在IOC容器中查找名称和<filter-name>
+        值一致的filter bean -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager" />
+        <property name="loginUrl" value="/toLogin" />
+        <!--<property name="successUrl" value="/toBackHome" />-->
+        <property name="unauthorizedUrl" value="/toRefuse" />
+        <!-- 配置哪些页面需要受保护，以及访问这些页面需要的权限 -->
+        <property name="filterChainDefinitions">
+            <value>
+                <!-- 第一次匹配优先的原则 -->
+                /js/** = anon
+                /css/** = anon
+                /images/** = anon
+                /lib/** = anon
+                /skin/** = anon
+                /userController/login = anon
+                /userController/logout = logout
+                /** = authc
+            </value>
+        </property>
+    </bean>
+
+    <!-- 7. 配置ModularRealmAuthenticator，可以实现多Realm认证 -->
+    <bean id="authenticator" class="org.apache.shiro.authc.pam.ModularRealmAuthenticator">
+        <!-- 配置认证策略，只要有一个Realm认证成功即可，并且返回所有认证成功信息 -->
+        <property name="authenticationStrategy">
+            <bean class="org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy"></bean>
+        </property>
+    </bean>
+    <!-- shiro end -->
+
+
+
+</beans>

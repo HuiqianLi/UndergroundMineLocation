@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IPayparamMapper">
+
+
+    <update id="update" parameterType="com.unknown.hrms.entity.Payparam">
+        update t_payparam set item=#{item},accumulation=#{accumulation},insurance=#{insurance},income=#{income},tax=#{tax} where  id=#{id}
+    </update>
+
+    <insert id="add" parameterType="com.unknown.hrms.entity.Payparam">
+        insert  into  t_payparam(item,accumulation,insurance,income,tax) values(#{item},#{accumulation},#{insurance},#{income},#{tax})
+    </insert>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from t_payparam where  id=#{id}
+    </delete>
+</mapper>

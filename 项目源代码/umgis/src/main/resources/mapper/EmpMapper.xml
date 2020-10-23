@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IEmpMapper">
+    <!--<select id="update" parameterType="com.unknown.hrms.entity.Emp">
+        update t_emp set update_time=Now() where id=#{id}
+    </select>-->
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.unknown.hrms.entity.Emp">
+
+        select * from t_emp where  id=#{id}
+    </select>
+    <select id="findByUserId" parameterType="java.lang.Integer" resultType="com.unknown.hrms.entity.Emp">
+
+            select * from t_emp where  id=#{user_id}
+        </select>
+    <select id="findOrgByUserId" parameterType="java.lang.Integer" resultType="com.unknown.hrms.entity.Emp">
+
+            select * from t_emp where (orgname=(select orgname from t_emp where  id=#{user_id})) or (orgno =(select orgno from t_emp where  id=#{user_id}));
+        </select>
+    <select id="selectEduGroupBy" resultType="com.unknown.hrms.entity.chart">
+        select education as name,COUNT(id) as data from t_emp GROUP BY education
+    </select>
+
+
+</mapper>

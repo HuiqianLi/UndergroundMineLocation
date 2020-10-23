@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IContractMapper">
+
+    <resultMap id="contractResultMap" type="com.unknown.hrms.entity.Contract">
+        <!--        column_表中的名字  property_自定义的名字(entity.XX中的)-->
+        <id column="id" property="id"></id>
+        <result column="emp_name" property="emp_name"/>
+        <result column="emp_unit" property="emp_unit"/>
+        <result column="emp_beginyear" property="emp_beginyear"/>
+        <result column="emp_endyearyaer" property="emp_endyearyaer"/>
+        <result column="emp_post" property="emp_post"/>
+        <result column="emp_title" property="emp_title"/>
+        <result column="emp_duty" property="emp_duty"/>
+        <result column="emp_pay" property="emp_pay"/>
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IDocMapper">
+
+    <!--    实现数据库到实体类的映射，当sql语句不是mybatisplus自己生成的时候需要写-->
+    <resultMap id="docResultMap" type="com.unknown.hrms.entity.Doc">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="type" property="type"/>
+        <result column="pub_time" property="pubTime"/>
+        <result column="operator" property="operator"/>
+        <result column="mod_time" property="modTime"/>
+        <result column="username" property="username"/>
+    </resultMap>
+
+    <select id="selectDocPage" resultMap="docResultMap">
+        SELECT d.*,p.username as username
+        FROM t_doc d
+        LEFT JOIN t_emp p ON(d.operator=p.id)
+        limit #{index},#{size}
+    </select>
+
+</mapper>

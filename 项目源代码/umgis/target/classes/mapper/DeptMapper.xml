@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IDeptMapper">
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.unknown.hrms.entity.Dept">
+
+        select * from t_emp where  id=#{id}
+    </select>
+    <select id="findByDeptName" parameterType="java.lang.String" resultType="com.unknown.hrms.entity.Staff">
+
+            select * from t_staff where  name =#{dept.name}
+        </select>
+
+</mapper>

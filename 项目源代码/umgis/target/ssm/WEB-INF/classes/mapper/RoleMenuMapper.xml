@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IRoleMenuMapper">
+<delete id="deleteRoleMenuByRoleId">
+    delete from t_role_menu where rid = #{roleId}
+</delete>
+
+<insert id="authRoleMenu">
+    insert into t_role_menu(rid,mid) values
+    <foreach collection="menuIdList" item="menuId" separator=",">
+        (#{roleId},#{menuId})
+    </foreach>
+</insert>
+</mapper>

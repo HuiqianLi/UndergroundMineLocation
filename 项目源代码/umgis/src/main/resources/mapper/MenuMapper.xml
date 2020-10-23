@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IMenuMapper">
+
+    <select id="getMenuListByParentId" resultMap="menuResultMap">
+        SELECT
+        m.*,
+        sub.id as subMenuId
+        FROM t_menu m
+        left join t_menu sub on(m.id=sub.parent_menu_id)
+        where
+        m.parent_menu_id =#{id}
+        group by m.id;
+    </select>
+    <resultMap id="menuResultMap" type="com.unknown.hrms.entity.Menu">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="url" property="url"></result>
+        <result column="type" property="type"></result>
+        <result column="ddesc" property="ddesc"></result>
+        <result column="p_code" property="pCode"></result>
+        <result column="subMenuId" property="subMenuId"></result>
+    </resultMap>
+
+    <select id="getAuthMenuZtreeListByRoleId" resultType="map">
+        select
+           m.id,
+           m.name,
+           m.parent_menu_id as pId,
+           ifnull(rm.rid,'') as checked
+        from
+           t_menu m
+        left join t_role_menu rm on (m.id = rm.mid and rm.rid = #{roleId})
+        group by m.id;
+    </select>
+
+    <select id="getMenuListByRoleId" resultType="com.unknown.hrms.entity.Menu">
+        select
+            m.id,
+            m.name,
+            m.type
+        from
+            t_menu m,
+            t_role_menu rm
+        where
+            rm.mid = m.id
+        and
+            rm.rid = #{roleId}
+    </select>
+
+</mapper>

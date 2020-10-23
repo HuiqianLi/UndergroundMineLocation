@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IInsuranceMapper">
+    <select id="insertMaps">
+        insert into t_insurance(emp_name,medical_insu,social_insu,accu_fund,payment_date) values
+        <foreach collection="maps" item="map" separator=",">
+            (#{map.empName},#{map.medicalInsu},#{map.socialInsu},#{map.accuFund},#{map.paymentDate})
+        </foreach>
+    </select>
+
+</mapper>

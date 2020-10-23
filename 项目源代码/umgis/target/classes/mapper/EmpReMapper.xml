@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.unknown.hrms.dao.IEmpReMapper">
+    <!--
+    <select id="selectUserByUsername" parameterType="String" resultType="com.unknown.hrms.entity.Emp">
+    select * from t_emp_record where id = #{id};
+    </select>
+    -->
+    <resultMap id="contractResultMap" type="com.unknown.hrms.entity.Emp">
+        <!--        column_表中的名字  property_自定义的名字(entity.XX中的)-->
+        <id column="id" property="id"></id>
+        <result column="username" property="username"/>
+        <result column="orgno" property="orgno"/>
+        <result column="orgname" property="orgname"/>
+        <result column="techgrade" property="techgrade"/>
+        <result column="post" property="post"/>
+        <result column="duty" property="duty"/>
+        <result column="title" property="title"/>
+    </resultMap>
+
+    <!--    <resultMap id="empResultMap" type="com.unknown.hrms.entity.Emp">-->
+
+    <!--        <id column="id" property="id"></id>-->
+    <!--        <result column="emp_name" property="empName"/>-->
+    <!--        <result column="emp_unit" property="empUnit"/>-->
+    <!--        <result column="birthday" property="birthday"/>-->
+    <!--        <result column="emp_edu_degree" property="empEduDegree"/>-->
+    <!--        <result column="address" property="address"/>-->
+    <!--        <result column="phone" property="phone"/>-->
+    <!--        <result column="email" property="email"/>-->
+
+    <!--        <result column="create_time" property="createTime"/>-->
+    <!--        <result column="update_time" property="updateTime"/>-->
+    <!--    </resultMap>-->
+
+    <!--继承-->
+    <!--    <resultMap id="empResultMap" type="emp" extends="base_empResultMap">-->
+    <!--        <association property="createUser" javaType="emp">-->
+    <!--            <result column="create_username" property="username"/>-->
+    <!--        </association>-->
+    <!--        <association property="updateUser" javaType="emp">-->
+    <!--            <result column="update_username" property="username"/>-->
+    <!--        </association>-->
+    <!--    </resultMap>-->
+
+    <!--函数声明对应sql语句-->
+    <!--    <select id="findByUserId" parameterType="Integer" resultType="com.unknown.hrms.entity.Emp">-->
+    <!--        select * from t_emp_record where  id=#{id}-->
+    <!--    </select>-->
+    <!--    <insert id="add">-->
+
+    <!--        insert into t_emp_record-->
+    <!--        (-->
+    <!--            id,-->
+    <!--            emp_name,-->
+    <!--            emp_unit,-->
+    <!--            birthday,-->
+    <!--            emp_edu_degree,-->
+    <!--            address,-->
+    <!--            phone,-->
+    <!--            email,-->
+    <!--            create_user,-->
+    <!--            create_time-->
+    <!--        )-->
+    <!--        value (-->
+    <!--            #{id},-->
+    <!--            #{empName},-->
+    <!--            #{empUnit},-->
+    <!--            #{birthday},-->
+    <!--            #{empEduDegree},-->
+    <!--            #{address},-->
+    <!--            #{phone},-->
+    <!--            #{email},-->
+    <!--            #{createUser.id},-->
+    <!--            #{createTime}-->
+    <!--        )-->
+    <!--    </insert>-->
+    <!--    <update id="update">-->
+    <!--        update t_emp_record-->
+    <!--        <set>-->
+    <!--            id = #{id},-->
+    <!--            emp_name = #{empName},-->
+    <!--            emp_unit = #{empUnit},-->
+    <!--            birthday = #{birthday},-->
+    <!--            emp_edu_degree = #{empEduDegree},-->
+    <!--            address = #{address},-->
+    <!--            phone = #{phone},-->
+    <!--            email = #{email},-->
+    <!--            update_user = #{updateUser.id},-->
+    <!--            update_time = #{updateTime}-->
+    <!--        </set>-->
+    <!--        <where>-->
+    <!--            id=#{id}-->
+    <!--        </where>-->
+
+    <!--    </update>-->
+
+    <!--    <delete id="delete">-->
+    <!--        delete from t_emp_record where id=#{id}-->
+    <!--    </delete>-->
+
+    <!--    <select id="getList" resultMap="base_empResultMap">-->
+    <!--        select * from t_emp_record-->
+
+
+    <!--    </select>-->
+
+    <!--
+    select
+        e.*,
+        (
+            select
+                cu.emp_name
+            from
+                t_emp_record cu
+            where
+                cu.id=e.create_user
+        ) as create_username
+        ,
+        (
+            select up.emp_name from t_emp_record up where up.id=e.update_user
+        ) as update_username
+        from t_emp_record e
+    -->
+
+    <!--    <select id="selectById" resultMap="base_empResultMap">-->
+    <!--        select * from t_emp_record where id=#{id}-->
+    <!--    </select>-->
+
+
+</mapper>
